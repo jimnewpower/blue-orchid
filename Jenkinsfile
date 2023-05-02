@@ -10,6 +10,7 @@ pipeline {
       steps {
         echo 'Building...'
         sh 'cd src/main && GOOS=linux GOARCH=amd64 CGO_ENABLED=0 go build -o ../../bin/main main.go'
+        sh 'chmod +x bin/main'
       }
     }
     stage('Test') {
@@ -20,6 +21,7 @@ pipeline {
     stage('Package') {
       steps {
         echo 'Packaging...'
+        sh 'cd deploy && terraform init && terraform plan -auto-approve'
       }
     }
     stage('Deploy') {
