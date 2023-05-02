@@ -2,9 +2,11 @@
   - !host 560732129735/blueOrchidApplication
 
 - &secrets
-  - !variable connectionstring
-  - !variable username
-  - !variable password
+  - !variable githubUsername
+  - !variable githubPassword
+  - !variable dbUrl
+  - !variable dbUsername
+  - !variable dbPassword
 
 - !group secrets
 

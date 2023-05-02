@@ -11,8 +11,8 @@ cat <<EOF
   "CONJUR_ACCOUNT" : "prima",
   "CONJUR_APPLIANCE_URL" : "https://ec2-34-204-42-151.compute-1.amazonaws.com",
   "CONJUR_CERT_FILE" : "./conjur-dev.pem",
-  "CONJUR_AUTHN_LOGIN" : "admin",
-  "CONJUR_AUTHN_API_KEY" : "18wv7sck9a66015fzsv3252qfvp23anzs81qkn4f916fbs3t228p4nb",
+  "CONJUR_AUTHN_LOGIN" : "host/blueOrchidApplication/560732129735/blueOrchidApplication",
+  "CONJUR_AUTHN_API_KEY" : "wsbmek334y5dd1kff9pt1997f0925saemkcg4xgc1t1gwm912ke69e",
   "CONJUR_AUTHENTICATOR" : "authn-iam",
   "DB_PORT" : "5432"
 }

@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "Running whoami:"
-../bin/cybr conjur whoami
+./cybr conjur whoami
 echo ""
 
 while true; do
@@ -53,17 +53,17 @@ echo "Appliance URL: $appliance_url"
 echo "Cert File: $cert_file"
 echo ""
 
-append_root='../bin/cybr conjur append-policy -b root -f ./config/policy/root-policy.yml'
+append_root='./cybr conjur append-policy -b root -f ./config/policy/root-policy.yml'
 echo ""
 echo ${append_root}
 eval ${append_root}
 echo ""
 
-#append_secrets='../bin/cybr conjur append-policy -b conjur/authn-iam/dev -f ./config/policy/secrets.yml'
+#append_secrets='./cybr conjur append-policy -b conjur/authn-iam/dev -f ./config/policy/secrets.yml'
 #echo ${append_secrets}
 #eval ${append_secrets}
 
-append_application='../bin/cybr conjur append-policy -b blueOrchidApplication -f ./config/policy/application.yml'
+append_application='./cybr conjur append-policy -b blueOrchidApplication -f ./config/policy/application.yml'
 echo ""
 echo ${append_application}
 eval ${append_application}
@@ -87,7 +87,7 @@ echo "Logging into Conjur. Accept the certificate, and replace the rc files."
 echo "conjur logon --self-signed -a $account -b $appliance_url -l $host"
 echo ""
 
-../bin/cybr conjur logon --self-signed -a $account -b $appliance_url -l $host
+./cybr conjur logon --self-signed -a $account -b $appliance_url -l $host
 # Accept certificate, replace rc files. Then, copy the cert to the cert directory.
 
 echo ""

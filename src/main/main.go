@@ -70,19 +70,19 @@ func query() (string) {
         panic(err)
 	}
 
-    secretValue, err := RetrieveSecret(conjur, "blueOrchidApplication/connectionstring")
+    secretValue, err := RetrieveSecret(conjur, "blueOrchidApplication/dbUrl")
     if err != nil {
         panic(err)
     }
     dbHost := string(secretValue)
 
-	secretValue, err = RetrieveSecret(conjur, "blueOrchidApplication/username")
+	secretValue, err = RetrieveSecret(conjur, "blueOrchidApplication/dbUsername")
     if err != nil {
         panic(err)
     }
     dbUser := string(secretValue)
 
-	secretValue, err = RetrieveSecret(conjur, "blueOrchidApplication/password")
+	secretValue, err = RetrieveSecret(conjur, "blueOrchidApplication/dbPassword")
     if err != nil {
         panic(err)
     }
