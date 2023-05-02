@@ -1,0 +1,20 @@
+- &apps
+  - !host 560732129735/blueOrchidApplication
+
+- &secrets
+  - !variable connectionstring
+  - !variable username
+  - !variable password
+
+- !group secrets
+
+- !permit
+  role: !group secrets
+  resources: *secrets
+  privileges: [ read, update, execute ]
+
+- !grant
+  roles:
+  - !group secrets
+  - !group iam-authn
+  members: *apps
