@@ -3,6 +3,7 @@ pipeline {
 
   tools {
     go 'go-1.20'
+    terraform 'Terraform'
   }
 
   stages {
