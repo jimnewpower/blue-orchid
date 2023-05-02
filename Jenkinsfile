@@ -5,6 +5,8 @@ pipeline {
     stage('Build') {
       steps {
         echo 'Building...'
+        make clean
+        sh build.sh
       }
     }
     stage('Test') {
